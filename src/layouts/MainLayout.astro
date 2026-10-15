@@ -1,0 +1,236 @@
+---
+// src/layouts/MainLayout.astro
+import '../styles/global.css';
+
+const { 
+  title = "ANS Yazılım & Veri Çözümleri",
+  description = "ANS Yazılım; işletmenizi büyüten kurumsal web siteleri, özel SaaS uygulamaları ve güvenilir veri çözümleri sunar. Tam zamanında teslimat ve kesintisiz destek garantisi.",
+  image = "https://www.ansyazilim.com/og-image.jpg",
+  url = "https://www.ansyazilim.com/"
+} = Astro.props;
+---
+
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/logo_2.png" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <!-- Temel SEO Meta Etiketleri -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="ANS Yazılım" />
+    <link rel="canonical" href={url} />
+
+    <!-- Open Graph (WhatsApp, LinkedIn, Facebook için Link Önizlemeleri) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter / X Card Etiketleri -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- REKLAM VE ZİYARETÇİ TAKİP KODLARI -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" is:inline></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <script is:inline>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'XXXXXXXXXXXXXXX');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
+  </head>
+  
+  <body class="bg-slate-50 text-slate-700 font-sans antialiased selection:bg-blue-200 selection:text-blue-900 relative">
+    
+    <!-- 1. TÜM SAYFALAR İÇİN ÜST SİBER DEVRE (Eski Kısa Boyutuna Döndürüldü: 500px, 10% fade) -->
+    <div class="absolute top-0 left-0 w-full h-[500px] z-0 pointer-events-none opacity-30 mix-blend-multiply"
+         style="-webkit-mask-image: linear-gradient(to bottom, black 10%, transparent 100%); mask-image: linear-gradient(to bottom, black 10%, transparent 100%);">
+      <svg class="circuit w-full h-full" data-seed="12" data-density="45000" aria-hidden="true"></svg>
+    </div>
+
+    <!-- ÜST MENÜ (Aydınlık Tema) -->
+    <header class="border-b border-slate-200 bg-white/95 backdrop-blur-md fixed top-0 w-full z-50 transition-all shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        
+        <a href="/" class="flex items-center gap-2 sm:gap-3 group py-2">
+          <img src="/logo_2.png" alt="ANS Yazılım Logo" class="h-12 sm:h-14 md:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-500" />
+          <span class="text-xl sm:text-3xl font-extrabold tracking-tight text-slate-900 flex items-center">
+            ANS <span class="text-blue-600 ml-1">Yazılım & Veri Çözümleri</span>
+          </span>
+        </a>
+
+        <nav class="hidden md:flex gap-8 text-sm font-bold tracking-wide text-slate-600">
+          <a href="/hizmetler" class="hover:text-blue-600 transition-colors">Hizmetlerimiz</a>
+          <a href="/projeler" class="hover:text-blue-600 transition-colors">Referanslar</a>
+          <a href="/iletisim" class="hover:text-blue-600 transition-colors">İletişim</a>
+        </nav>
+
+        <button id="menu-btn" aria-label="Menüyü Aç/Kapat" class="md:hidden text-slate-600 hover:text-blue-600 focus:outline-none p-2">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+        <a href="/hizmetler" class="block py-2 text-base font-bold text-slate-700 hover:text-blue-600 transition-colors border-b border-slate-100">Hizmetlerimiz</a>
+        <a href="/projeler" class="block py-2 text-base font-bold text-slate-700 hover:text-blue-600 transition-colors border-b border-slate-100">Referanslar</a>
+        <a href="/iletisim" class="block py-2 text-base font-bold text-slate-700 hover:text-blue-600 transition-colors">İletişim</a>
+      </div>
+    </header>
+
+    <main class="pt-20 min-h-screen relative overflow-hidden">
+      <!-- DEVASA FİLİGRAN -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] md:w-[800px] md:h-[800px] opacity-[0.02] pointer-events-none flex items-center justify-center -z-10">
+         <img src="/logo_2.png" alt="" class="w-full h-full object-contain grayscale" />
+      </div>
+      
+      <slot />
+    </main>
+
+    <a href="https://wa.me/905369210061?text=Merhaba%2C%20ANS%20Yaz%C4%B1l%C4%B1m%20web%20sitesinden%20ula%C5%9F%C4%B1yorum.%20Projemiz%20hakk%C4%B1nda%20g%C3%B6r%C3%BC%C5%9Febilir%20miyiz%3F" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20b858] text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:-translate-y-1 group flex items-center justify-center">
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span class="absolute right-16 bg-white text-slate-800 text-xs font-bold py-1.5 px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-slate-200 pointer-events-none shadow-sm">Hızlı Destek</span>
+    </a>
+
+    <!-- ALT MENÜ (FOOTER) -->
+    <footer class="border-t border-slate-200 bg-white pt-16 pb-12 mt-12 relative overflow-hidden min-h-[350px] flex flex-col justify-center">
+      
+      <!-- 2. TÜM SAYFALAR İÇİN ALT SİBER DEVRE -->
+      <div class="absolute inset-0 z-0 pointer-events-none opacity-30 mix-blend-multiply"
+           style="-webkit-mask-image: linear-gradient(to top, black 30%, transparent 100%); mask-image: linear-gradient(to top, black 30%, transparent 100%);">
+        <svg class="circuit w-full h-full" data-seed="29" data-density="45000" aria-hidden="true"></svg>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 flex flex-col items-center mt-8">
+        <div class="flex items-center gap-3 mb-6 grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer">
+           <img src="/logo_2.png" alt="ANS Yazılım & Veri Çözümleri" class="h-10" />
+           <span class="text-xl font-extrabold tracking-tight text-slate-900">
+              ANS <span class="text-blue-600">Yazılım ve Veri Çözümleri</span>
+           </span>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8 text-xs font-bold tracking-wider text-slate-500 uppercase">
+           <a href="/kvkk" class="hover:text-blue-600 transition-colors">KVKK Aydınlatma Metni</a>
+           <a href="/gizlilik-politikasi" class="hover:text-blue-600 transition-colors">Gizlilik Politikası</a>
+           <a href="/cerez-politikasi" class="hover:text-blue-600 transition-colors">Çerez Politikası</a>
+        </div>
+
+        <p class="text-center text-slate-500 text-sm font-medium">&copy; {new Date().getFullYear()} ANS Yazılım & Veri Çözümleri. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <!-- TÜM SİTE İÇİN GLOBAL SCRIPTLER -->
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuBtn?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+      });
+
+      function drawCircuit(svg) {
+        const seedStart = Number(svg.dataset.seed ?? 11);
+        const density = Number(svg.dataset.density ?? 40000);
+        const box = svg.getBoundingClientRect();
+        const W = Math.max(360, box.width);
+        const H = Math.max(300, box.height);
+        svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+
+        let s = seedStart;
+        const r = () => {
+          s = (s * 16807) % 2147483647;
+          return s / 2147483647;
+        };
+
+        let out = '';
+        let pulses = '';
+        const n = Math.round((W * H) / density);
+        for (let i = 0; i < n; i++) {
+          const fromLeft = r() < 0.5;
+          let y = Math.round((r() * H) / 20) * 20;
+          let x = fromLeft ? -10 : W + 10;
+          let d = `M${x} ${y}`;
+          const steps = 2 + Math.floor(r() * 3);
+          const dir = fromLeft ? 1 : -1;
+          for (let k = 0; k < steps; k++) {
+            x += dir * (60 + r() * W * 0.16);
+            d += ` H${x.toFixed(0)}`;
+            if (k < steps - 1) {
+              const dy = (r() < 0.5 ? -1 : 1) * 20 * (1 + Math.floor(r() * 2));
+              x += dir * Math.abs(dy);
+              y += dy;
+              d += ` L${x.toFixed(0)} ${y}`;
+            }
+          }
+          out += `<path d="${d}" fill="none" stroke="#cbd5e1" stroke-width="1.5"/>`;
+          out += `<circle cx="${x.toFixed(0)}" cy="${y}" r="3.5" fill="${r() < 0.18 ? '#3b82f6' : '#94a3b8'}"/>`;
+          pulses += `<path class="pulse" d="${d}"/>`;
+        }
+        svg.innerHTML = out + pulses;
+        animatePulses(svg, r);
+      }
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function animatePulses(svg, r) {
+        if (reduceMotion) return;
+        const SPEED = 170; 
+        svg.querySelectorAll('path.pulse').forEach((p) => {
+          const len = p.getTotalLength();
+          const dash = 14;
+          p.style.strokeDasharray = `${dash} ${len + dash}`;
+          const duration = ((len + dash) / SPEED) * 1000;
+          p.animate([{ strokeDashoffset: len + dash }, { strokeDashoffset: 0 }], {
+            duration,
+            iterations: Infinity,
+            delay: -r() * duration,
+            easing: 'linear',
+          });
+        });
+      }
+
+      const circuits = Array.from(document.querySelectorAll('svg.circuit'));
+      const drawAll = () => circuits.forEach(drawCircuit);
+      drawAll();
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout(drawAll, 200);
+      });
+    </script>
+
+    <style is:global>
+      .circuit .pulse { 
+        stroke: #3b82f6; 
+        stroke-width: 2; 
+        fill: none; 
+        stroke-dasharray: 0 100000; 
+        stroke-linecap: round; 
+        opacity: 0.6; 
+      }
+      @media (prefers-reduced-motion: reduce) { 
+        .circuit .pulse { opacity: 0; } 
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+---
+// src/pages/projeler.astro
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Neler Yaptık? | ANS Yazılım">
+
+  <section class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24">
+    
+    <!-- Ortalanmış Başlık ve Rozet -->
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-bold shadow-sm mb-6">
+        <span class="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse shadow-[0_0_8px_#2563eb]"></span>
+        Gurur Duyduğumuz İşler
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">Müşterilerimiz İçin Neler Yaptık?</h1>
+      <p class="text-lg text-slate-600 font-medium">Sektörlerinde öncü kurumların operasyonlarını dijitale taşıdık. İstediğiniz projenin detaylarını ve canlı versiyonunu aşağıdan inceleyebilirsiniz.</p>
+    </div>
+
+    <div class="max-w-6xl mx-auto space-y-12">
+
+      <!-- AMİRAL GEMİSİ PROJE (Öne Çıkan): AHALTEKE -->
+      <div class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm group relative hover:shadow-xl transition-shadow duration-500">
+        
+        <div class="flex flex-col lg:flex-row">
+          <!-- Görsel Alanı (Masaüstü ve Mobil Kombinasyonu) -->
+          <div class="lg:w-1/2 relative bg-slate-100 border-b lg:border-b-0 lg:border-r border-slate-200 p-6 sm:p-10 flex items-center justify-center min-h-[300px] overflow-hidden">
+             <!-- Arka Plan Websitesi (Bulanık) -->
+             <img src="/ahal-web.png" class="absolute inset-0 w-full h-full object-cover opacity-10 blur-sm pointer-events-none" alt="Ahalteke Arka Plan" />
+             
+             <!-- Önde Yönetim Paneli (Masaüstü) - TIKLANABİLİR -->
+             <div class="relative w-full max-w-md rounded-xl overflow-hidden border border-slate-300 shadow-2xl transform transition-transform duration-700 group-hover:-translate-y-2 group-hover:scale-105 z-10 cursor-zoom-in">
+                <div class="bg-slate-200 px-3 py-2 flex gap-1.5 pointer-events-none border-b border-slate-300">
+                   <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                   <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                   <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                </div>
+                <img src="/ahal-yonetim.png" class="w-full object-cover bg-white pointer-events-auto" alt="Ahalteke Yönetim Paneli" data-lightbox />
+             </div>
+
+             <!-- Üzerine Binen Mobil Uygulama Ekranı - TIKLANABİLİR -->
+             <div class="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 w-24 sm:w-32 rounded-2xl overflow-hidden border-[4px] border-white shadow-2xl transform transition-transform duration-700 group-hover:-translate-y-4 z-20 cursor-zoom-in">
+                <img src="/ahal-hakem.jpeg" class="w-full h-auto object-cover pointer-events-auto" alt="Ahalteke Mobil Hakem" data-lightbox />
+             </div>
+          </div>
+          
+          <!-- İçerik Alanı -->
+          <div class="lg:w-1/2 p-8 lg:p-12 relative z-10 flex flex-col justify-center bg-white">
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 text-[10px] font-bold tracking-wider uppercase rounded-full border border-blue-100">Uçtan Uca SaaS</span>
+              <span class="px-2.5 py-1 bg-slate-50 text-slate-600 text-[10px] font-bold tracking-wider uppercase rounded-full border border-slate-200">Otomasyon</span>
+            </div>
+            
+            <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">Ahalteke Kulüp ve Turnuva Yönetim Sistemi</h2>
+            <p class="text-slate-600 font-medium mb-6 leading-relaxed">
+              Tenis kulüpleri için sıfırdan geliştirilen kapsamlı dijital ekosistem. Üye yönetiminden canlı skor girişine kadar kulübün tüm operasyonel yükünü tek bir platformda toplar.
+            </p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 mb-8">
+               <div class="flex items-center gap-2.5 text-slate-700 text-sm font-bold">
+                 <div class="bg-blue-100 p-1 rounded-md"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div> Kapsamlı Kulüp Yönetimi
+               </div>
+               <div class="flex items-center gap-2.5 text-slate-700 text-sm font-bold">
+                 <div class="bg-blue-100 p-1 rounded-md"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div> Dinamik Kort Rezervasyonu
+               </div>
+               <div class="flex items-center gap-2.5 text-slate-700 text-sm font-bold">
+                 <div class="bg-blue-100 p-1 rounded-md"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div> Lig & Ana Tablo Fikstürleri
+               </div>
+               <div class="flex items-center gap-2.5 text-slate-700 text-sm font-bold">
+                 <div class="bg-blue-100 p-1 rounded-md"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div> Algoritmik Kura Eşleştirme
+               </div>
+               <div class="flex items-center gap-2.5 text-slate-700 text-sm font-bold">
+                 <div class="bg-blue-100 p-1 rounded-md"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div> Hakem Canlı Skor Modülü
+               </div>
+               <div class="flex items-center gap-2.5 text-slate-700 text-sm font-bold">
+                 <div class="bg-blue-100 p-1 rounded-md"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div> Oyuncu Portalı ve Analiz
+               </div>
+            </div>
+
+            <div>
+              <a href="https://www.ahalteketeniskulubu.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 text-blue-700 hover:bg-blue-600 hover:text-white rounded-xl font-bold transition-all border border-blue-200 hover:border-blue-600">
+                Canlı Projeyi İncele
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DİĞER PROJELER (Aydınlık Kompakt Izgara) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        <!-- Manuvital Randevu (YENİ) -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col sm:flex-row items-start gap-6 hover:border-emerald-400 hover:shadow-lg transition-all group lg:col-span-2">
+           <div class="w-full sm:w-64 h-48 sm:h-40 flex-shrink-0 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 relative cursor-zoom-in">
+             <img src="/manuvital-web.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" alt="Manuvital" data-lightbox />
+           </div>
+           <div class="flex flex-col h-full justify-center">
+              <div>
+                <span class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">Randevu Otomasyonu & Web</span>
+                <h3 class="text-xl font-bold text-slate-900 mt-3 group-hover:text-emerald-600 transition-colors leading-tight">Manuvital Terapi Merkezi</h3>
+                <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                  Danışanların kolayca randevu oluşturabildiği, klinikteki seans takvimini otomatik düzenleyen akıllı rezervasyon modülü ve dijital vitrin.
+                </p>
+                <div class="mt-3 text-sm font-bold text-slate-800">
+                  Fayda: Randevu takibi otomatikleşti, asistan yükü azaldı.
+                </div>
+              </div>
+              <a href="https://www.manuvital.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-emerald-600 hover:text-emerald-800 font-bold text-sm mt-4 transition-colors">
+                Siteyi İncele <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+           </div>
+        </div>
+        
+        <!-- Bek Akademi (Tam Genişlik) -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col sm:flex-row items-start gap-6 hover:border-green-400 hover:shadow-lg transition-all group lg:col-span-2">
+           <div class="w-full sm:w-64 h-48 sm:h-40 flex-shrink-0 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 relative cursor-zoom-in">
+             <img src="/bek-web.png" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100" alt="Bek Akademi" data-lightbox />
+           </div>
+           <div class="flex flex-col h-full justify-center">
+              <div>
+                <span class="text-[10px] font-bold text-green-700 uppercase tracking-wider bg-green-50 px-2.5 py-1 rounded-full border border-green-100">Kurumsal Web Sitesi</span>
+                <h3 class="text-xl font-bold text-slate-900 mt-3 group-hover:text-green-600 transition-colors leading-tight">Bek Eğitim Akademi</h3>
+                <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                  Kurumun eğitim felsefesini yansıtan modern dijital vitrini. <span class="text-slate-500 font-semibold">(Öğrenci takip sistemi ve finansal yönetim paneli geliştirme aşamasındadır.)</span>
+                </p>
+              </div>
+              <a href="https://www.bekegitimakademi.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-green-600 hover:text-green-800 font-bold text-sm mt-4 transition-colors">
+                Siteyi İncele <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+           </div>
+        </div>
+
+        <!-- u5mTürkiye -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col sm:flex-row items-start gap-6 hover:border-blue-400 hover:shadow-lg transition-all group lg:col-span-2">
+           <div class="w-full sm:w-64 h-48 sm:h-40 flex-shrink-0 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 flex cursor-zoom-in">
+             <img src="/u5m-map.png" class="w-1/2 h-full object-cover border-r border-slate-200 opacity-90 group-hover:opacity-100 transition-opacity" alt="u5mTürkiye Harita" data-lightbox />
+             <img src="/u5m-graph.png" class="w-1/2 h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" alt="u5mTürkiye Grafik" data-lightbox />
+           </div>
+           <div class="flex flex-col h-full justify-center">
+              <div>
+                <span class="text-[10px] font-bold text-blue-700 uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">Veri Analizi</span>
+                <h3 class="text-xl font-bold text-slate-900 mt-3 group-hover:text-blue-600 transition-colors leading-tight">u5mTürkiye Araştırma Platformu</h3>
+                <p class="text-sm text-slate-600 mt-2 leading-relaxed">Beş yaş altı ölüm hızı verilerinin akademik düzeyde işlendiği; zaman serileri ve harita bazlı interaktif görselleştirme portalı.</p>
+              </div>
+              <a href="https://u5mturkiye.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-800 font-bold text-sm mt-4 transition-colors">
+                Platforma Git <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+           </div>
+        </div>
+        
+        <!-- Kadızade -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col sm:flex-row items-start gap-6 hover:border-purple-400 hover:shadow-lg transition-all group lg:col-span-2">
+           <div class="w-full sm:w-64 h-48 sm:h-40 flex-shrink-0 rounded-xl overflow-hidden bg-slate-100 border border-slate-200 flex cursor-zoom-in">
+             <img src="/kadizade-web.png" class="w-1/2 h-full object-cover border-r border-slate-200 opacity-90 group-hover:opacity-100 transition-opacity" alt="Kadızade Web" data-lightbox />
+             <img src="/kadizade-blog.png" class="w-1/2 h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" alt="Kadızade Blog" data-lightbox />
+           </div>
+           <div class="flex flex-col h-full justify-center">
+              <div>
+                <span class="text-[10px] font-bold text-purple-700 uppercase tracking-wider bg-purple-50 px-2.5 py-1 rounded-full border border-purple-100">Kurumsal Web & Blog</span>
+                <h3 class="text-xl font-bold text-slate-900 mt-3 group-hover:text-purple-600 transition-colors leading-tight">Kadızade Dijital Vitrin</h3>
+                <p class="text-sm text-slate-600 mt-2 leading-relaxed max-w-3xl">Yüksek SEO performansına sahip, işletmenin dijital kimliğini ve "Sepetçinin Defteri" adlı blog mimarisini modern bir arayüzle sunan kurumsal web projesi.</p>
+              </div>
+              <a href="https://www.kadizade.net" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-purple-600 hover:text-purple-800 font-bold text-sm mt-4 transition-colors">
+                Siteyi Ziyaret Et <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+           </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- AYDINLIK TEMA CTA (Ortak Harekete Geçirici Kutu) -->
+    <div class="mt-28 max-w-5xl mx-auto rounded-3xl p-10 lg:p-14 text-center shadow-lg relative overflow-hidden bg-blue-600 border border-blue-500">
+      <div class="absolute inset-0 z-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px] opacity-10 pointer-events-none"></div>
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="relative z-10">
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-white mb-4">Sıradaki Proje Sizin Olsun</h2>
+        <p class="text-blue-100 text-lg max-w-2xl mx-auto mb-8 font-medium">İhtiyacınıza uygun teknoloji çözümünü birlikte tasarlayalım. Fikrinizi gerçeğe dönüştürmek için hemen tanışalım.</p>
+        <a href="/iletisim" class="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-slate-50 text-blue-700 rounded-xl font-extrabold transition-transform hover:-translate-y-1 shadow-md">
+          Projeyi Konuşalım
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- PROFESYONEL LIGHTBOX (POP-UP) MODÜLÜ -->
+  <div id="lightbox" class="fixed inset-0 z-[100] bg-slate-900/90 backdrop-blur-sm hidden flex-col justify-center items-center opacity-0 transition-opacity duration-300">
+     <!-- Kapatma Butonu -->
+     <button id="lightbox-close" class="absolute top-6 right-6 text-white hover:text-blue-400 transition-colors bg-black/50 rounded-full p-2 border border-slate-700">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+     </button>
+     <!-- Büyütülen Resim -->
+     <img id="lightbox-img" src="" class="max-w-[95vw] max-h-[90vh] object-contain rounded-xl shadow-2xl transform scale-95 transition-transform duration-300 border border-slate-700 bg-white" alt="Proje Detayı" />
+  </div>
+
+  <!-- LIGHTBOX İÇİN JAVASCRIPT -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+    const triggers = document.querySelectorAll('img[data-lightbox]');
+
+    // Resimlere tıklanınca açılma fonksiyonu
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const src = trigger.getAttribute('src');
+        if(src) {
+          lightboxImg.src = src;
+          lightbox?.classList.remove('hidden');
+          // Animasyon için hafif gecikme
+          setTimeout(() => {
+            lightbox?.classList.remove('opacity-0');
+            lightboxImg?.classList.remove('scale-95');
+            lightboxImg?.classList.add('scale-100');
+          }, 20);
+        }
+      });
+    });
+
+    // Kapatma Fonksiyonu
+    const closeLightbox = () => {
+       lightbox?.classList.add('opacity-0');
+       lightboxImg?.classList.remove('scale-100');
+       lightboxImg?.classList.add('scale-95');
+       setTimeout(() => {
+         lightbox?.classList.add('hidden');
+         if(lightboxImg) lightboxImg.src = '';
+       }, 300);
+    };
+
+    closeBtn?.addEventListener('click', closeLightbox);
+    
+    // Boşluğa veya ESC tuşuna basınca kapatma
+    lightbox?.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    
+    document.addEventListener('keydown', (e) => {
+       if(e.key === "Escape" && !lightbox?.classList.contains('hidden')) {
+          closeLightbox();
+       }
+    });
+  </script>
+
+</MainLayout>
